@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 07</strong></h1>
+<h2><label>Calcula area e mostra o dobro</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Calcula area e mostra o dobro
+        <form method="POST">
+            Altura
+            <input class="form-control" type="text" name="altura" required><br>
+            Largura
+            <input class="form-control" type="text" name="largura" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+<h1>Retorno: {{area}}</h1>
+
+
+{% endblock %}

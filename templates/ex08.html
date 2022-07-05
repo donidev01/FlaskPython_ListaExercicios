@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 08</strong></h1>
+<h2><label>Calcula salario bruto</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Calcula salario bruto
+        <form method="POST">
+            Valor por hora
+            <input class="form-control" type="text" name="vlhora" required><br>
+            Horas trabalhadas
+            <input class="form-control" type="text" name="qtdTrabalhados" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+<h1>Retorno: {{salario}}</h1>
+
+
+{% endblock %}

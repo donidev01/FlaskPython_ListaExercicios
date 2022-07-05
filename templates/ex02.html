@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 02</strong></h1>
+<h2><label>Recebe numero e mostra</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Recebe numero e exibe
+        <form method="POST">
+            <input class="form-control" type="text" name="numero" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+<h1>Retorno: {{numero}}</h1>
+
+
+{% endblock %}

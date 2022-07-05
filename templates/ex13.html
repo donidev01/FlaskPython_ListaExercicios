@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 13</strong></h1>
+<h2><label>Peso ideal por sexo.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Peso ideal por sexo
+        <form method="POST">
+            Altura
+            <input class="form-control" type="text" name="altura" required><br>
+            FEMININO
+            <input type="radio" name="sexo" value="F">
+            MASCULINO
+            <input type="radio" name="sexo" value="M"><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+<h1>Retorno: {{peso}}</h1>
+{% endblock %}

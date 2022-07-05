@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 11</strong></h1>
+<h2><label>Calc Diversos.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Calc Diversos
+        <form method="POST">
+            Fahrenheit
+            <input class="form-control" type="text" name="n1" required><br>
+            <input class="form-control" type="text" name="n2" required><br>
+            <input class="form-control" type="text" name="n3" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+
+{% for e in lst%}
+<h1>Retorno: {{e}}</h1><br>
+{% endfor %}
+{% endblock %}

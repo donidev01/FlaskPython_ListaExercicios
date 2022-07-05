@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 14</strong></h1>
+<h2><label>Calculo de multa pescado.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Calculo de multa pescado
+        <form method="POST">
+            Pesagem
+            <input class="form-control" type="text" name="pesagem" required><br>
+            Valor Multa
+            <input class="form-control" type="text" name="vlmulta" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+<h1>{{retorno}}</h1>
+
+{% endblock %}
