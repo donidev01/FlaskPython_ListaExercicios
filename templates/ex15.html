@@ -1,32 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<h1>PGM de calculo salarial (descontos)</h1>
-
-<body>
-    <form method="POST">
-        VALOR HORA
-        <input type="text" name="vl_hora">
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 15</strong></h1>
+<h2><label>Calculo salario mes.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
         <br>
-        QUANT.HORA
-        <input type="text" name="qtd_hora">
-        <br>
-        <input type="submit" name="calcular">
-    </form>
-    + Valor Hora : R${{vl_hora}}<br>
-    + Quantidade : R${{qtd_hora}}<br>
-    + Salário Bruto : R$ {{salario_bruto}}<br>
-    - IR (11%) : R$ {{IR}}<br>
-    - INSS (8%) : R$ {{INSS}}<br>
-    - Sindicato ( 5%) : R$ {{SINDICATO}}<br>
-    - TotalDescontos : R${{TOTALDES}}<br>
-    * Salário Liquido : R$ {{SALARIO_LIQUIDO}}<br>
-</body>
+        Calculo salario mes
+        <form method="POST">
+            vlhora
+            <input class="form-control" type="text" name="vlhora" required><br>
+            qtdhorasTrabalhadas
+            <input class="form-control" type="text" name="qtdhorasTrabalhadas" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
 
-</html>
+</form>
+{{dadosSal}}
+{% endblock %}

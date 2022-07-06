@@ -147,3 +147,20 @@ def ex14():
         
         else:
             return 'Livre de multa pesagem menor que limite permitido'
+
+def ex15():
+    vlhora = request.form.get('vlhora')
+    qtdhorasTrabalhadas = request.form.get('qtdhorasTrabalhadas')
+
+    if vlhora and qtdhorasTrabalhadas != None:
+        vlhora = float(vlhora)
+        qtdhorasTrabalhadas = int(qtdhorasTrabalhadas)
+
+        SalarioBruto = vlhora * qtdhorasTrabalhadas 
+        IR = (SalarioBruto * 11) / 100 
+        INSS =(SalarioBruto * 8) / 100
+        Sindicato = (SalarioBruto * 5) / 100
+        TotalDescontos = IR + INSS + Sindicato
+        SalarioLiquido = SalarioBruto - TotalDescontos
+        return SalarioBruto, IR, INSS, Sindicato, TotalDescontos, SalarioLiquido
+        

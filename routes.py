@@ -138,5 +138,16 @@ def ex14():
     retorno = funcionalidade.ex14()
     return render_template('/ex14.html', retorno=retorno)
 
+
+@app.route('/ex15')
+def ex_15():
+    return render_template('ex15.html')
+
+@app.route('/ex15', methods=['POST'])
+def ex15():
+    dadosSal = funcionalidade.ex15()
+    return render_template('/ex15.html', dadosSal=dadosSal)
+
+
 if __name__=='__main__':
     app.run(debug=True)
