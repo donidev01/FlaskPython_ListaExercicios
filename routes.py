@@ -1,7 +1,7 @@
 
 from flask import Flask, render_template, request
 
-from src import funcionalidade
+from src import funcionalidade, funcionalidade1
 
 app=Flask(__name__)
 
@@ -10,16 +10,9 @@ app=Flask(__name__)
 def index():
     return render_template("index.html")
 
-
 @app.route("/index1")
 def index1():
     return render_template("index1.html")
-
-
-@app.route("/lst")
-def base0():
-    return render_template("/index.html")
-
 
 @app.route('/ex01')
 def ex1():
@@ -29,6 +22,17 @@ def ex1():
 def ex01():
     msg = funcionalidade.ex01()
     return render_template("ex01.html", msg=msg)
+
+
+@app.route('/ex001')
+def exlst1():
+    return render_template('ex001.html')
+
+@app.route('/ex001', methods=['POST'])
+def exlst1_1():
+    numero = funcionalidade1.ex001()
+    return render_template('ex001.html', numero=numero)
+    
 
 
 @app.route('/ex02')
