@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 16</strong></h1>
+<h2><label>Calculo tinta.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Calculo de tinta
+        <form method="POST">
+            Area em metros quadrados
+            <input class="form-control" type="text" name="metros" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+
+<ul>
+    {% for e in lst %}
+    <p>{{e}}</p><br>
+    {% endfor %}
+    {% endblock %}
+</ul>

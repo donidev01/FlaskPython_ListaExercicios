@@ -10,6 +10,17 @@ app=Flask(__name__)
 def index():
     return render_template("index.html")
 
+
+@app.route("/index1")
+def index1():
+    return render_template("index1.html")
+
+
+@app.route("/lst")
+def base0():
+    return render_template("/index.html")
+
+
 @app.route('/ex01')
 def ex1():
     return render_template('ex01.html')
@@ -145,9 +156,21 @@ def ex_15():
 
 @app.route('/ex15', methods=['POST'])
 def ex15():
-    dadosSal = funcionalidade.ex15()
-    return render_template('/ex15.html', dadosSal=dadosSal)
+    lst_menu = ['Vl_Hora, Qtd_horas Trabalhadas']
+    lst = funcionalidade.ex15()
+    return render_template('/ex15.html', lst=lst, lst_menu=lst_menu)
 
+
+@app.route('/ex16')
+def ex_16():
+    return render_template('ex16.html')
+
+@app.route('/ex16', methods=['POST'])
+def ex16():
+    v = 'ValorTotal a pagar R$: '
+    l = 'Quantidade Total de latas: '
+    lst = funcionalidade.ex16()
+    return render_template('/ex16.html', lst = lst, v=v, l=l)
 
 if __name__=='__main__':
     app.run(debug=True)

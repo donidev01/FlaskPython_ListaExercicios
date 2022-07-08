@@ -1,3 +1,4 @@
+from urllib.request import Request
 from webbrowser import get
 
 from flask import request
@@ -149,6 +150,7 @@ def ex14():
             return 'Livre de multa pesagem menor que limite permitido'
 
 def ex15():
+    lst = []
     vlhora = request.form.get('vlhora')
     qtdhorasTrabalhadas = request.form.get('qtdhorasTrabalhadas')
 
@@ -157,10 +159,35 @@ def ex15():
         qtdhorasTrabalhadas = int(qtdhorasTrabalhadas)
 
         SalarioBruto = vlhora * qtdhorasTrabalhadas 
+        lst.append(SalarioBruto)
         IR = (SalarioBruto * 11) / 100 
+        lst.append(IR)
         INSS =(SalarioBruto * 8) / 100
+        lst.append(INSS)
         Sindicato = (SalarioBruto * 5) / 100
+        lst.append(Sindicato)
         TotalDescontos = IR + INSS + Sindicato
+        lst.append(TotalDescontos)
         SalarioLiquido = SalarioBruto - TotalDescontos
-        return SalarioBruto, IR, INSS, Sindicato, TotalDescontos, SalarioLiquido
-        
+        lst.append(SalarioLiquido)
+        return lst
+
+def ex16():
+    lst = []
+    cont = valor= qtdlatas = 0
+    metros = request.form.get('metros')
+    if metros != None:
+        metros = int(metros)
+        litrosnecessarios = metros / 3
+        while True:
+            if litrosnecessarios > 1:
+                litrosnecessarios -= 18
+                cont+=1
+            else:
+                break
+        valor = cont * 80
+        valor = f'Valor Total a pagar: {valor}'
+        qtdlatas = f'Quantidade de latas: {cont}'
+        lst.append(valor)
+        lst.append(qtdlatas)
+    return lst

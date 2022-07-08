@@ -19,5 +19,8 @@
             <button class="btn btn-primary" type="submit">SUBMETER</button></p>
 
 </form>
-{{dadosSal}}
+
+{% for e in lst%}
+<p>Retorno: {{lst_menu}}: {{e}}</p><br>
+{% endfor %}
 {% endblock %}
