@@ -88,14 +88,20 @@ def lst02ex07():
           
           if n1 > n2 and n1 > n3:
                if n2 > n3:
-                    return f'Numero maior é {n1} numero menor {n3}'
+                    return f'Numero maior111 é {n1} numero menor {n3}'
+               else:
+                    return f'Numero222 maior é {n1} numero menor {n2}'
 
           elif n2 > n3 and n2 > n1:
                if n3 > n1:
                     return f'Numero maior é {n2} numero menor {n1}'
+               else:
+                    return f'Numero maior é {n2} numero menor {n3}'
 
           elif n3 > n2 and n3 > n1:
                if n1 > n2:
                     return f'Numero maior é {n3} numero menor {n2}'
+               else:
+                    return f'Numero maior é {n3} numero menor {n1}'
 
 

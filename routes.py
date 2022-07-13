@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request
 
 from src import funcionalidade, funcionalidadelst2
@@ -250,7 +249,16 @@ def ex06lst2():
     numero = funcionalidadelst2.lst02ex06()
     return render_template('ex06lst2.html', numero = numero)
 
-# route exercicio 04 lst2
+# route exercicio 07 lst2
+@app.route('/ex07lst2')
+def ex7lst2():
+    return render_template('ex07lst2.html')
+
+@app.route('/ex07lst2', methods=['POST'])
+def ex07lst2():
+    numeros = funcionalidadelst2.lst02ex07()
+    return render_template('ex07lst2.html', numeros= numeros)
+
 # route exercicio 04 lst2
 # route exercicio 04 lst2
 # route exercicio 04 lst2
