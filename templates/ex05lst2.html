@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 05 lst2</strong></h1>
+<h2><label>Verifica nota aluno</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Recebe duas notas e verifica se aluno aprovado
+        <form method="POST">
+            Nota 1
+            <input class="form-control" type="text" name="n1" required><br>
+            Nota 2
+            <input class="form-control" type="text" name="n2" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+<h1>Retorno: {{media}}</h1>
+
+
+{% endblock %}

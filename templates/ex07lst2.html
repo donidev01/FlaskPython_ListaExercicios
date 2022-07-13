@@ -1,23 +1,26 @@
-{% extends 'lst.html' %}
-
+{% extends 'base.html' %}
 {% block conteudo %}
 <p>
 <p>
-<h1><strong>Exercicio 01</strong></h1>
-<h2><label>Mostra maior de 2 numeros</label></h2>
+<h1><strong>Exercicio 07 lst2</strong></h1>
+<h2><label>Verifica maior e menor</label></h2>
 <p>
 <p>
 <p><label>
         <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
         Versão WEB by Fernando Oliveira 07/2022.
         <br>
-        Recebe msg e exibe
+        Recebe 3 numeros maior e menor
         <form method="POST">
-            Numero1
+            Numero 1
             <input class="form-control" type="text" name="n1" required><br>
-            Numero2
+            Numero 2
             <input class="form-control" type="text" name="n2" required><br>
+            Numero 3
+            <input class="form-control" type="text" name="n3" required><br>
             <button class="btn btn-primary" type="submit">SUBMETER</button></p>
 </form>
-<h1>Retorno: {{numero}}</h1>
+<h1>Retorno: {{numeros}}</h1>
+
+
 {% endblock %}
