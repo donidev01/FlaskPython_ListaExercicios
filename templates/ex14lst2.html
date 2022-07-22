@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 14 lst2</strong></h1>
+<h2><label>Media com atribuição de conceitos.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Media com atribuição de conceitos.
+        <form method="POST">
+            Nota 1
+            <input class="form-control" type="text" name="n1" required><br>
+
+            Nota 2
+            <input class="form-control" type="text" name="n2" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+
+
+<h1>Retorno: </h1>
+
+<p>{{media}}</p>
+
+{% endblock %}

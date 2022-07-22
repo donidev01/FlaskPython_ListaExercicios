@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 08 lst2</strong></h1>
+<h2><label>Recebe 3 preços e opta pelo mais barato</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Recebe 3 preços e opta pelo mais barato
+        <form method="POST">
+            Numero 1
+            <input class="form-control" type="text" name="preco1" required><br>
+            Numero 2
+            <input class="form-control" type="text" name="preco2" required><br>
+            Numero 3
+            <input class="form-control" type="text" name="preco3" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+<h1>Retorno: {{precoMenor}}</h1>
+
+
+{% endblock %}

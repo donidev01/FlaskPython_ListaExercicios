@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 12 lst2</strong></h1>
+<h2><label>Calc folha de pagamento.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Calc folha de pagamento.
+        <form method="POST">
+            Salario
+            <input class="form-control" type="text" name="salario" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+
+
+<h1>Retorno: </h1>
+{% for e in lst_dados %}
+<p>{{e}}</p>
+{% endfor %}
+{% endblock %}

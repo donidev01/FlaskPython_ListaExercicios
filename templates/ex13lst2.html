@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 13 lst2</strong></h1>
+<h2><label>Verifica correpondente semana.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Verifica correpondente semana.
+        <form method="POST">
+            Entre com um dia entre 1 e 7
+            <input class="form-control" type="text" name="diaSel" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+</form>
+
+
+<h1>Retorno: </h1>
+
+<p>{{diaSel}}</p>
+
+{% endblock %}
