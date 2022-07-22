@@ -327,9 +327,7 @@ def ex13lst2():
 def ex14lst2():
     n1 = request.form.get("n1")
     n2 = request.form.get("n2")
-
     if n1 and n2 != None:
-
         n1 = float(n1)
         n2 = float(n2)
         media = (n1 + n2) / 2
@@ -349,3 +347,31 @@ def ex14lst2():
 
         if 0 <= media <= 4:
             return f"{msg} Reprovado"
+
+
+# funcionalidade15
+def ex15lst2():
+    lsttri = []
+    m1 = request.form.get("m1")
+    m2 = request.form.get("m2")
+    m3 = request.form.get("m3")
+    if m1 and m2 and m3 != None:
+        m1 = float(m1)
+        m2 = float(m2)
+        m3 = float(m3)
+        if m1 + m2 > m3 and m1 + m3 > m2 and m2 + m1 > m3:
+            msgTri = "As medidas fornecidas forman um triangulo"
+            if m1 == m2 == m3:
+                tpTri = "equilatero"
+                return f"{msgTri}: {tpTri}"
+
+            if m1 == m2 or m1 == m3 or m2 == m3:
+                tpTri = "Isósceles"
+                return f"{msgTri}: {tpTri}"
+
+            if m1 != m2 or m1 != m3 or m2 != m3:
+                tpTri = "Escaleno"
+                return f"{msgTri}: {tpTri}"
+
+        else:
+            msgTri = "As medidas fornecidas NÃO forman um triangulo"

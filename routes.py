@@ -394,5 +394,17 @@ def ex14lst2_1():
     return render_template("ex14lst2.html", media=media)
 
 
+# route exercicio 15 lst2
+@app.route("/ex15lst2")
+def ex15lst2():
+    return render_template("ex15lst2.html")
+
+
+@app.route("/ex15lst2", methods=["POST"])
+def ex15lst2_1():
+    ret = funcionalidadelst2.ex15lst2()
+    return render_template("ex15lst2.html", ret=ret)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
