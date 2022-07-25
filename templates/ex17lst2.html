@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 17 lst2</strong></h1>
+<h2><label>Verifica se é ano Bissexto</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Verifica se é ano Bissexto
+        <form method="POST">
+            ano
+            <input class="form-control" type="text" name="ano" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+
+<p>Resultado</p>
+<p>{{ano}}</p>
+{% endblock %}

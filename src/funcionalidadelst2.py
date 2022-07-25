@@ -1,4 +1,5 @@
 from ast import Return
+from mmap import mmap
 
 from flask import request
 
@@ -359,8 +360,8 @@ def ex15lst2():
         m1 = float(m1)
         m2 = float(m2)
         m3 = float(m3)
-        if m1 + m2 > m3 and m1 + m3 > m2 and m2 + m1 > m3:
-            msgTri = "As medidas fornecidas forman um triangulo"
+        if m1 + m2 > m3 and m1 + m3 > m2 and m2 + m1 > m3 and m2 + m3 > m1:
+            msgTri = f"As medidas {m1} || {m2} || {m3} fornecidas formam um triangulo"
             if m1 == m2 == m3:
                 tpTri = "equilatero"
                 return f"{msgTri}: {tpTri}"
@@ -374,4 +375,74 @@ def ex15lst2():
                 return f"{msgTri}: {tpTri}"
 
         else:
-            msgTri = "As medidas fornecidas NÃO forman um triangulo"
+            return f"As medidas fornecidas NÃO formam um triangulo {m1} || {m2} || {m3}"
+
+
+# funcionalidade16
+def ex16lst2():
+    a = request.form.get("a")
+    b = request.form.get("b")
+    c = request.form.get("c")
+    if a and b and c != None:
+        a = float(a)
+        b = float(b)
+        c = float(c)
+        if a == 0:
+            return "A IGUAL A ZERO não é uma equação do segundo grau!!!"
+        else:
+            D = b**2 - 4 * a * c
+            if D < 0:
+                return "A equação não possui raizes reais pois o DELTA é negativo"
+
+            if D == 0:
+                x1 = (-b + D ** (1 / 2)) / (2 * a)
+                s1 = "Raiz 1: {:.2f}".format(x1)
+                return s1
+
+            if D > 0:
+                x1 = (-b + D ** (1 / 2)) / (2 * a)
+                x2 = (+b + D ** (1 / 2)) / (2 * a)
+                s1 = "Raiz 1: {:.2f}".format(x1)
+                s2 = "Raiz 2: {:.2f}".format(x2)
+                return s1, s2
+
+
+# funcionalidade17
+def ex17lst2():
+    ano = request.form.get("ano")
+    if ano != None:
+        ano = int(ano)
+        if ano % 4 == 0:
+            if ano % 100 != 0:
+                return f"{ano} é BISEXTO"
+            else:
+                return f"{ano} Não é BISEXTO"
+
+        if ano % 400 != 0:
+            return f"{ano} Não é BISSEXTO"
+        else:
+            return f"{ano} é BISSEXTO"
+
+
+# funcionalidade18
+def ex18lst2():
+    dados = request.form.get("data")
+    if dados != None:
+        dados = str(dados)
+        if len(dados) != 8:
+            return (
+                "A data informada é invalida. a mesma deve estar no formato dd/mm/aaaa"
+            )
+
+        else:
+            dd = int(dados[:2])
+            mm = int(dados[2:4])
+            aaaa = int(dados[4:8])
+            if dd < 0 or dd > 31:
+                return "Dia invalido"
+            if mm < 0 or mm > 12:
+                return "Dia invalido"
+            if aaaa < 0 or aaaa > 3000:
+                return "ano invalido"
+
+            return f"Data de retorno {dd}/{mm}/{aaaa}"

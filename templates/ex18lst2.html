@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 18 lst2</strong></h1>
+<h2><label>Verifica se formato de data é valido</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Verifica se formato de data é valido
+        <form method="POST">
+            data formato dd mm aaaa
+            <input class="form-control" type="text" name="data" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+
+<p>Resultado</p>
+<p>{{dados}}</p>
+{% endblock %}

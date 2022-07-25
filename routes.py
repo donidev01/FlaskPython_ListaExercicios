@@ -406,5 +406,41 @@ def ex15lst2_1():
     return render_template("ex15lst2.html", ret=ret)
 
 
+# route exercicio 16 lst2
+@app.route("/ex16lst2")
+def ex016lst2():
+    return render_template("ex16lst2.html")
+
+
+@app.route("/ex16lst2", methods=["POST"])
+def ex16lst2_1():
+    raiz = funcionalidadelst2.ex16lst2()
+    return render_template("ex16lst2.html", raiz=raiz)
+
+
+# route exercicio 17 lst2
+@app.route("/ex17lst2")
+def ex17lst2():
+    return render_template("ex17lst2.html")
+
+
+@app.route("/ex17lst2", methods=["POST"])
+def ex17lst2_1():
+    ano = funcionalidadelst2.ex17lst2()
+    return render_template("ex17lst2.html", ano=ano)
+
+
+# route exercicio 18 lst2
+@app.route("/ex18lst2")
+def exlst18():
+    return render_template("ex18lst2.html")
+
+
+@app.route("/ex18lst2", methods=["POST"])
+def ex18lst2_1():
+    dados = funcionalidadelst2.ex18lst2()
+    return render_template("ex18lst2.html", dados=dados)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

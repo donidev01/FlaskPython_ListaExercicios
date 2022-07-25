@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 16 lst2</strong></h1>
+<h2><label>Calculo equação segundo grau forma ax2 + bx + c.</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaSequencial">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Calculo equação segundo grau forma ax2 + bx + c.
+        <form method="POST">
+            valor a
+            <input class="form-control" type="text" name="a" required><br>
+            valor b
+            <input class="form-control" type="text" name="b" required><br>
+            valor c
+            <input class="form-control" type="text" name="c" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+<p>Resultado</p>
+<ul>
+    <p>{{raiz}}</p>
+    {% endblock %}
+</ul>
