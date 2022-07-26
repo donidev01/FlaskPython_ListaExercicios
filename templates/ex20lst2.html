@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 20 lst2</strong></h1>
+<h2><label>Lê 3 notas e imprime a media</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaDeDecisao">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Lê 3 notas e imprime a media
+        <form method="POST">
+            N1
+            <input class="form-control" type="text" name="n1" required><br>
+            N2
+            <input class="form-control" type="text" name="n2" required><br>
+            N3
+            <input class="form-control" type="text" name="n3" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+<p>Resultado</p>
+<p>{{media}}</p>
+{% endblock %}

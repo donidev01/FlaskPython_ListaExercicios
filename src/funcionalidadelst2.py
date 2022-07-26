@@ -464,3 +464,21 @@ def ex19lst2():
 
         if len(numero) == 1:
             return f"Numero informado: {numero} : {numero[:1]} unidades"
+
+
+# funcionalidade20
+def ex20lst2():
+    n1 = request.form.get("n1")
+    n2 = request.form.get("n2")
+    n3 = request.form.get("n3")
+    if n1 and n2 and n3 != None:
+        n1 = float(n1)
+        n2 = float(n2)
+        n3 = float(n3)
+        media = (n1 + n2 + n3) / 3
+        if media == 10:
+            return f"Aprovado com distinção {n1} || {n2} || {n3} Media: {media}"
+        if 7 <= media <= 10:
+            return f"Aprovado Notas {n1} || {n2} || {n3} Media: {media}"
+        if media < 7:
+            return f"Reprovado Notas {n1} || {n2} || {n3} Media: {media}"
