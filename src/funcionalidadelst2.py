@@ -446,3 +446,21 @@ def ex18lst2():
                 return "ano invalido"
 
             return f"Data de retorno {dd}/{mm}/{aaaa}"
+
+
+# funcionalidade19
+def ex19lst2():
+    numero = request.form.get("numero")
+    if numero != None:
+        numero = str(numero)
+        if len(numero) > 3:
+            return "Numero precisa ser menor que mil"
+
+        if len(numero) == 3:
+            return f"Numero informado: {numero} : {numero[:1]} centenas {numero[1:2]} dezenas {numero[2:3]} unidades"
+
+        if len(numero) == 2:
+            return f"Numero informado: {numero} : {numero[:1]} dezenas {numero[1:2]} unidades"
+
+        if len(numero) == 1:
+            return f"Numero informado: {numero} : {numero[:1]} unidades"
