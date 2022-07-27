@@ -547,3 +547,16 @@ def ex22lst2():
             return "Numero é PAR"
         else:
             return "Numero é IMPAR"
+
+
+# funcionalidade23
+def ex23lst2():
+    numero = request.form.get("numero")
+    if numero != None:
+        numero = float(numero)
+        numero2 = round(numero)
+
+        if numero == numero2:
+            return f"O numero {numero} é um inteiro."
+        else:
+            return f"O numero {numero} é um decimal."
