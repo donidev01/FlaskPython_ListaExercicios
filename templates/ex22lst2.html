@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 22 lst2</strong></h1>
+<h2><label>Determina se é PAR ou IMPAR</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaDeDecisao">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Determina se é PAR ou IMPAR
+        <form method="POST">
+            Informe o numero
+            <input class="form-control" type="text" name="numero" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+<p>Resultado</p>
+<p>{{numero}}</p>
+{% endblock %}

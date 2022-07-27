@@ -478,5 +478,17 @@ def ex21lst2_1():
     return render_template("ex21lst2.html", notas=notas)
 
 
+# route exercicio 22 lst2
+@app.route("/ex22lst2")
+def ex22lst2():
+    return render_template("ex22lst2.html")
+
+
+@app.route("/ex22lst2", methods=["POST"])
+def ex22lst2_1():
+    numero = funcionalidadelst2.ex22lst2()
+    return render_template("ex22lst2.html", numero=numero)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

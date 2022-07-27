@@ -536,3 +536,14 @@ def ex21lst2():
                 conta1 += 1
 
     return f" Para o valor {valor1},00 será necessario: {conta100} notas de 100. || {conta50} notas 50 || {conta20} notas de 20 || {conta10} notas 10 || {conta5} notas de 5 || {conta1} notas 1"
+
+
+# funcionalidade22
+def ex22lst2():
+    numero = request.form.get("numero")
+    if numero != None:
+        numero = int(numero)
+        if numero % 2 == 0:
+            return "Numero é PAR"
+        else:
+            return "Numero é IMPAR"
