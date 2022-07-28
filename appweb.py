@@ -502,5 +502,17 @@ def ex023lst2_1():
     return render_template("ex23lst2.html", numero=numero)
 
 
+# route exercicio 24 lst2
+@app.route("/ex24lst2")
+def ex24lst():
+    return render_template("ex24lst2.html")
+
+
+@app.route("/ex24lst2", methods=["POST"])
+def ex24lst2_1():
+    dados = funcionalidadelst2.ex24lst2()
+    return render_template("ex24lst2.html", dados=dados)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

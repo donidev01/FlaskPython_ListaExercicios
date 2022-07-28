@@ -560,3 +560,57 @@ def ex23lst2():
             return f"O numero {numero} é um inteiro."
         else:
             return f"O numero {numero} é um decimal."
+
+
+# funcionalidade24
+def ex24lst2():
+
+    n1 = request.form.get("numero")
+    n2 = request.form.get("numero2")
+    op = request.form.get("tpopracao")
+    if n1 and n2 and op != None:
+        n1 = float(n1)
+        n2 = float(n2)
+        op = op
+        if op == "par_impar":
+            if n1 % 2 == 0:
+                msgn1 = f"{n1} é PAR"
+            else:
+                msgn1 = f"{n1} é IMPAR"
+
+            if n2 % 2 == 0:
+                msgn2 = f"{n2} é PAR"
+            else:
+                msgn2 = f"{n2} é IMPAR"
+            return f"{msgn1} || {msgn2}"
+
+        if op == "posi_neg":
+            if n1 < 0:
+                msgn1 = f"{n1} é negativo"
+            else:
+                msgn1 = f"{n1} é positivo"
+
+            if n2 < 0:
+                msgn2 = f"{n2} é negativo"
+            else:
+                msgn2 = f"{n2} é positivo"
+
+            return f"{msgn1} || {msgn2}"
+
+        if op == "int_delc":
+            n1_1 = n1
+            n = round(n1)
+
+            n2_2 = n2
+            n_2 = round(n2)
+            if n == n1_1:
+                msgn1 = f"{n1} é inteiro"
+            else:
+                msgn1 = f"{n1} é decimal"
+
+            if n_2 == n2_2:
+                msgn2 = f"{n2} é inteiro"
+            else:
+                msgn2 = f"{n2} é decimal"
+
+            return f"{msgn1} || {msgn2}"

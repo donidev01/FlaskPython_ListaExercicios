@@ -1,4 +1,30 @@
-CPF
-<input type="radio" name="tipo_pess" value="cpf" required>
-CNPJ
-<input type="radio" name="tipo_pess" value="cnpj" required><br>
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 24 lst2</strong></h1>
+<h2><label>Determina se é inteiro ou decimal</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaDeDecisao">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Determina se é inteiro ou decimal
+        <form method="POST">
+            Numero 1
+            <input class="form-control" type="text" name="numero" required><br>
+            Numero 2
+            <input class="form-control" type="text" name="numero2" required><br>
+            PAR / IMPAR
+            <input type="radio" name="tpopracao" value="par_impar" required>
+            POSITIVO/NEGATIVO
+            <input type="radio" name="tpopracao" value="posi_neg" required>
+            INTEIRO/DECIMAL
+            <input type="radio" name="tpopracao" value="int_delc" required><br>
+            <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+<p>Resultado</p>
+<p>{{dados}}</p>
+{% endblock %}
