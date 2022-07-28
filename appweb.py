@@ -514,5 +514,16 @@ def ex24lst2_1():
     return render_template("ex24lst2.html", dados=dados)
 
 
+@app.route("/ex25lst2")
+def ex25lst2():
+    return render_template("ex25lst2.html")
+
+
+@app.route("/ex25lst2", methods=["POST"])
+def ex25lst2_1():
+    dados = funcionalidadelst2.ex25lst2()
+    return render_template("ex25lst2.html", dados=dados)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

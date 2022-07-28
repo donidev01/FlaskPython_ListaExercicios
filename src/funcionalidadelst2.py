@@ -614,3 +614,38 @@ def ex24lst2():
                 msgn2 = f"{n2} é decimal"
 
             return f"{msgn1} || {msgn2}"
+
+
+# funcionalidade25
+def ex25lst2():
+    lstrespostas = []
+    cont = 0
+    resp1 = request.form.get("telvitima")
+    resp2 = request.form.get("loc_crime")
+    resp3 = request.form.get("mora_crime")
+    resp4 = request.form.get("dev_crime")
+    resp5 = request.form.get("tra_crime")
+    if resp1 and resp2 and resp3 and resp4 and resp5 != None:
+        if resp1 == "sim":
+            lstrespostas.append("sim")
+        if resp2 == "sim":
+            lstrespostas.append("sim")
+        if resp3 == "sim":
+            lstrespostas.append("sim")
+        if resp4 == "sim":
+            lstrespostas.append("sim")
+        if resp5 == "sim":
+            lstrespostas.append("sim")
+
+    for e in lstrespostas:
+        if e == "sim":
+            cont += 1
+    if cont == 2:
+        return "Suspeito do crime"
+    if 3 <= cont <= 4:
+        return "Cumplice do crime"
+    if cont == 5:
+        return "Assasino"
+
+    else:
+        return "Inocente"

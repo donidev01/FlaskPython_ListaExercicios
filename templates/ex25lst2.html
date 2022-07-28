@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 25 lst2</strong></h1>
+<h2><label>Determina se é inteiro ou decimal</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaDeDecisao">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Determina se é inteiro ou decimal
+        <table>
+            <form method="POST">
+
+                Telefonou para a vitima?
+                SIM
+                <input type="radio" name="telvitima" value="sim" required>
+                NAO
+                <input type="radio" name="telvitima" value="nao" required><br>
+                Esteve no local do crime?
+                SIM
+                <input type="radio" name="loc_crime" value="sim" required>
+                NAO
+                <input type="radio" name="loc_crime" value="nao" required><br>
+
+                Mora perto da vitima?
+                SIM
+                <input type="radio" name="mora_crime" value="sim" required>
+                NAO
+                <input type="radio" name="mora_crime" value="nao" required><br>
+
+                Devia para a vitima?
+                SIM
+                <input type="radio" name="dev_crime" value="sim" required>
+                NAO
+                <input type="radio" name="dev_crime" value="nao" required><br>
+                Ja trabalhou com a vitima?
+                SIM
+                <input type="radio" name="tra_crime" value="sim" required>
+                NAO
+                <input type="radio" name="tra_crime" value="nao" required><br>
+
+                <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+</table>
+<p>Resultado</p>
+<p>{{dados}}</p>
+{% endblock %}
