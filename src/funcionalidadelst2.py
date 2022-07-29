@@ -649,3 +649,36 @@ def ex25lst2():
 
     else:
         return "Inocente"
+
+
+# funcionalidade26
+def ex26lst2():
+    tpcombustivel = request.form.get("tpcombustivel")
+    qtdlitros = request.form.get("qtdlitros")
+    vllitroalcool = 1.90
+    vllitrogasolina = 2.50
+    if tpcombustivel and qtdlitros != None:
+        qtdlitros = int(qtdlitros)
+        tpcombustivel = tpcombustivel.upper()
+        if tpcombustivel == "A":
+            if qtdlitros <= 20:
+                tpcombustivel = "Alcool"
+                desconto = (qtdlitros * 3) / 100
+                vlpagar = (vllitroalcool * qtdlitros) - desconto
+                return f"Tipo combustivel: {tpcombustivel} || Valor por litro: {vllitroalcool} || Quantidade de litros: {qtdlitros} = R$ {vllitroalcool * qtdlitros} || Desconto aplicado 3% R$ {desconto} || Total a pagar com desconto R$ {vlpagar}"
+            else:
+                tpcombustivel = "Alcool"
+                desconto = (qtdlitros * 5) / 100
+                vlpagar = (vllitroalcool * qtdlitros) - desconto
+                return f"Tipo combustivel: {tpcombustivel} || Valor por litro: {vllitroalcool} || Quantidade de litros: {qtdlitros} = R$ {vllitroalcool * qtdlitros} || Desconto aplicado 5% R$ {desconto} || Total a pagar com desconto R$ {vlpagar}"
+        else:
+            if qtdlitros <= 20:
+                tpcombustivel = "Gasolina"
+                desconto = (qtdlitros * 4) / 100
+                vlpagar = (vllitrogasolina * qtdlitros) - desconto
+                return f"Tipo combustivel: {tpcombustivel} || Valor por litro: {vllitrogasolina} || Quantidade de litros: {qtdlitros} = R$ {vllitrogasolina * qtdlitros} || Desconto aplicado 4% R$ {desconto} || Total a pagar com desconto R$ {vlpagar}"
+            else:
+                tpcombustivel = "Gasolina"
+                desconto = (qtdlitros * 6) / 100
+                vlpagar = (vllitrogasolina * qtdlitros) - desconto
+                return f"Tipo combustivel: {tpcombustivel} || Valor por litro: {vllitrogasolina} || Quantidade de litros: {qtdlitros} = R$ {vllitrogasolina * qtdlitros} || Desconto aplicado 6% R$ {desconto} || Total a pagar com desconto R$ {vlpagar}"

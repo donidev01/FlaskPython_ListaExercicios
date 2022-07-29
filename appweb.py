@@ -514,6 +514,7 @@ def ex24lst2_1():
     return render_template("ex24lst2.html", dados=dados)
 
 
+# route exercicio 25 lst2
 @app.route("/ex25lst2")
 def ex25lst2():
     return render_template("ex25lst2.html")
@@ -523,6 +524,18 @@ def ex25lst2():
 def ex25lst2_1():
     dados = funcionalidadelst2.ex25lst2()
     return render_template("ex25lst2.html", dados=dados)
+
+
+# route exercicio 26 lst2
+@app.route("/ex26lst2")
+def ex26lst2():
+    return render_template("ex26lst2.html")
+
+
+@app.route("/ex26lst2", methods=["POST"])
+def ex26lst2_1():
+    dados = funcionalidadelst2.ex26lst2()
+    return render_template("ex26lst2.html", dados=dados)
 
 
 if __name__ == "__main__":
