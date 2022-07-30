@@ -682,3 +682,115 @@ def ex26lst2():
                 desconto = (qtdlitros * 6) / 100
                 vlpagar = (vllitrogasolina * qtdlitros) - desconto
                 return f"Tipo combustivel: {tpcombustivel} || Valor por litro: {vllitrogasolina} || Quantidade de litros: {qtdlitros} = R$ {vllitrogasolina * qtdlitros} || Desconto aplicado 6% R$ {desconto} || Total a pagar com desconto R$ {vlpagar}"
+
+
+# funcionalidade27
+def ex27lst2():
+    tpfruta = request.form.get("tp_fruta")
+    kg = request.form.get("kg")
+    if tpfruta and kg != None:
+        tpfruta = tpfruta.upper()  # recebe o tipo de fruta
+        kg = int(kg)  # recebe o kg
+        if tpfruta == "MACA":
+            if kg <= 5:
+                preco = 1.80
+                vltotalcompra = preco * kg
+                vltotalcompra1 = vltotalcompra
+
+            else:
+                preco = 1.50
+                vltotalcompra = preco * kg
+                vltotalcompra1 = vltotalcompra
+
+            if vltotalcompra >= 25:
+                desc = vltotalcompra * 10 / 100
+                vltotalcompra1 = vltotalcompra - desc
+                return f"Fruta: {tpfruta} || kg: {kg} || valor total compra {vltotalcompra1} com desconto de 10% ({desc}) {vltotalcompra1}."
+            else:
+                return f"Fruta: {tpfruta} || kg: {kg} || valor total compra {vltotalcompra1} sem desconto."
+
+        if tpfruta == "MORANGO":
+            if kg <= 5:
+                preco = 2.50
+                vltotalcompra = preco * kg
+                vltotalcompra1 = vltotalcompra
+
+            else:
+                preco = 2.20
+                vltotalcompra = preco * kg
+                vltotalcompra1 = vltotalcompra
+
+            if vltotalcompra >= 25:
+                desc = vltotalcompra * 10 / 100
+                vltotalcompra = vltotalcompra - desc
+                return f"Fruta: {tpfruta} || kg: {kg} || Valor total compra {vltotalcompra} com desconto de 10% ({desc}) {vltotalcompra1}."
+            else:
+                return f"Fruta: {tpfruta} || kg: {kg} || valor total compra {vltotalcompra} sem desconto."
+
+
+# funcionalidade27
+def ex28lst2():
+    tpcarne = request.form.get("tp_carne")
+    kg = request.form.get("kg")
+    tp_pg = request.form.get("tp_pg")
+    if tpcarne and kg and tp_pg != None:
+        kg = int(kg)
+        tpcarne = tpcarne
+        tp_pg = tp_pg
+        if kg <= 5:
+            if tpcarne == "File_Duplo":
+                if tp_pg == "cartaotb":
+                    vlcompra = kg * 4.90
+                    desc = vlcompra * 5 / 100
+                    vlapagar = vlcompra - desc
+                    return vlapagar
+                else:
+
+                    return f"{kg * 4.90}"
+
+            if tpcarne == "Alcatra":
+                if tp_pg == "cartaotb":
+                    vlcompra = kg * 5.90
+                    desc = vlcompra * 5 / 100
+                    vlapagar = vlcompra - desc
+                    return vlapagar
+                else:
+                    return f"{kg * 5.90}"
+
+            if tpcarne == "Picanha":
+                if tp_pg == "cartaotb":
+                    vlcompra = kg * 6.90
+                    desc = vlcompra * 5 / 100
+                    vlapagar = vlcompra - desc
+                    return vlapagar
+                else:
+                    return f"{kg * 6.90}"
+        ####### kilos maior que 6
+        if kg >= 6:
+            if tpcarne == "File_Duplo":
+                if tp_pg == "cartaotb":
+                    vlcompra = kg * 4.00
+                    desc = vlcompra * 5 / 100
+                    vlapagar = vlcompra - desc
+                    return vlapagar
+                else:
+
+                    return f"{kg * 4.00}"
+
+            if tpcarne == "Alcatra":
+                if tp_pg == "cartaotb":
+                    vlcompra = kg * 5.00
+                    desc = vlcompra * 5 / 100
+                    vlapagar = vlcompra - desc
+                    return vlapagar
+                else:
+                    return f"{kg * 5.00}"
+
+            if tpcarne == "Picanha":
+                if tp_pg == "cartaotb":
+                    vlcompra = kg * 6.00
+                    desc = vlcompra * 5 / 100
+                    vlapagar = vlcompra - desc
+                    return vlapagar
+                else:
+                    return f"{kg * 6.00}"

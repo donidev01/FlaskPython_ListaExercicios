@@ -538,5 +538,29 @@ def ex26lst2_1():
     return render_template("ex26lst2.html", dados=dados)
 
 
+# route exercicio 27 lst2
+@app.route("/ex27lst2")
+def ex27lst2():
+    return render_template("ex27lst2.html")
+
+
+@app.route("/ex27lst2", methods=["POST"])
+def ex27lst2_1():
+    dados = funcionalidadelst2.ex27lst2()
+    return render_template("ex27lst2.html", dados=dados)
+
+
+# route exercicio 28 lst2
+@app.route("/ex28lst2")
+def ex28lst2():
+    return render_template("ex28lst2.html")
+
+
+@app.route("/ex28lst2", methods=["POST"])
+def ex28lst2_1():
+    dados = funcionalidadelst2.ex28lst2()
+    return render_template("ex28lst2.html", dados=dados)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

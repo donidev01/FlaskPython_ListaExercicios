@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 27 lst2</strong></h1>
+<h2><label>Calculo venda de frutas</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaDeDecisao">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Calculo venda de frutas
+        <table>
+            <form method="POST">
+                FRUTA?<br>
+                Morango R$ 2,50 por Kg. acima de 5 kg R$ 2,20 por Kg
+                <input type="radio" name="tp_fruta" value="Morango" required><br>
+                Maçã R$ 1,80 por Kg. acima de 5 kg R$ 1,50 por Kg
+                <input type="radio" name="tp_fruta" value="Maca" required><br>
+                Quantidade em kg
+                <input class="form-control" type="text" name="kg" required><br>
+                <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+</table>
+<p>Resultado</p>
+<p>{{dados}}</p>
+{% endblock %}

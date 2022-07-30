@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<p>
+<p>
+<h1><strong>Exercicio 28 lst2</strong></h1>
+<h2><label>Supermercados Tabajara</label></h2>
+<p>
+<p>
+<p><label>
+        <a href="https://wiki.python.org.br/EstruturaDeDecisao">Extraido de PythonBrasil</a>
+        Versão WEB by Fernando Oliveira 07/2022.
+        <br>
+        Supermercados Tabajara
+        <table>
+            <form method="POST">
+                Carnes<br>
+                File Duplo até 5kg R$ 4,90. Acima de 5kg R$ 4,00 por Kg
+                <input type="radio" name="tp_carne" value="File_Duplo" required><br><br>
+
+                Alcatra até 5kg R$ 5,90. Acima de 5kg R$ 5,00 por Kg
+                <input type="radio" name="tp_carne" value="Alcatra" required><br><br>
+
+                Picanha até 5kg R$ 6,90. Acima de 5kg R$ 6,00 por Kg
+                <input type="radio" name="tp_carne" value="Picanha" required><br><br>
+
+                Pagamento com cartão TABAJARA
+                <input type="radio" name="tp_pg" value="cartao" required><br><br>
+                Pagamento outros
+                <input type="radio" name="tp_pg" value="outros" required><br><br>
+
+                Quantidade em kg
+                <input class="form-control" type="text" name="kg" required><br>
+                <button class="btn btn-primary" type="submit">SUBMETER</button></p>
+
+</form>
+</table>
+<p>Resultado</p>
+<p>{{dados}}</p>
+{% endblock %}
