@@ -728,7 +728,7 @@ def ex27lst2():
                 return f"Fruta: {tpfruta} || kg: {kg} || valor total compra {vltotalcompra} sem desconto."
 
 
-# funcionalidade27
+# funcionalidade28
 def ex28lst2():
     tpcarne = request.form.get("tp_carne")
     kg = request.form.get("kg")
@@ -741,30 +741,36 @@ def ex28lst2():
             if tpcarne == "File_Duplo":
                 if tp_pg == "cartaotb":
                     vlcompra = kg * 4.90
-                    desc = vlcompra * 5 / 100
+                    desc = (vlcompra * 5) / 100
                     vlapagar = vlcompra - desc
-                    return vlapagar
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: {desc} || ValorFinal {vlapagar}"
                 else:
-
-                    return f"{kg * 4.90}"
+                    vlcompra = kg * 4.90
+                    vlapagar = vlcompra
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: não tem || ValorFinal {vlapagar}"
 
             if tpcarne == "Alcatra":
                 if tp_pg == "cartaotb":
                     vlcompra = kg * 5.90
                     desc = vlcompra * 5 / 100
                     vlapagar = vlcompra - desc
-                    return vlapagar
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: {desc} || ValorFinal {vlapagar}"
                 else:
-                    return f"{kg * 5.90}"
+                    vlcompra = kg * 5.90
+                    vlapagar = vlcompra
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: não tem || ValorFinal {vlapagar}"
 
             if tpcarne == "Picanha":
                 if tp_pg == "cartaotb":
                     vlcompra = kg * 6.90
                     desc = vlcompra * 5 / 100
                     vlapagar = vlcompra - desc
-                    return vlapagar
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: {desc} || ValorFinal {vlapagar}"
                 else:
-                    return f"{kg * 6.90}"
+                    vlcompra = kg * 6.90
+                    vlapagar = vlcompra
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: não tem || ValorFinal {vlapagar}"
+
         ####### kilos maior que 6
         if kg >= 6:
             if tpcarne == "File_Duplo":
@@ -772,25 +778,30 @@ def ex28lst2():
                     vlcompra = kg * 4.00
                     desc = vlcompra * 5 / 100
                     vlapagar = vlcompra - desc
-                    return vlapagar
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: {desc} || ValorFinal {vlapagar}"
                 else:
-
-                    return f"{kg * 4.00}"
+                    vlcompra = kg * 4.00
+                    vlapagar = vlcompra
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: não tem || ValorFinal {vlapagar}"
 
             if tpcarne == "Alcatra":
                 if tp_pg == "cartaotb":
                     vlcompra = kg * 5.00
                     desc = vlcompra * 5 / 100
                     vlapagar = vlcompra - desc
-                    return vlapagar
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: {desc} || ValorFinal {vlapagar}"
                 else:
-                    return f"{kg * 5.00}"
+                    vlcompra = kg * 5.00
+                    vlapagar = vlcompra
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: não tem || ValorFinal {vlapagar}"
 
             if tpcarne == "Picanha":
                 if tp_pg == "cartaotb":
                     vlcompra = kg * 6.00
                     desc = vlcompra * 5 / 100
                     vlapagar = vlcompra - desc
-                    return vlapagar
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: {desc} || ValorFinal {vlapagar}"
                 else:
-                    return f"{kg * 6.00}"
+                    vlcompra = kg * 6.00
+                    vlapagar = vlcompra
+                    return f"Corte: {tpcarne} || Kg: {kg} || PreçoTotal: {vlcompra} || MeioPagamento: {tp_pg} || Desconto: não tem || ValorFinal {vlapagar}"
